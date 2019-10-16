@@ -1,0 +1,270 @@
+.section-about,
+.section-services,
+.section-projects,
+.section-team,
+.section-price,
+.section-premium,
+.section-facts {
+    padding: $gutter-vertical-small 0;
+
+    @include respond(tab-land) {
+        padding: 6rem 3rem;
+    }
+}
+
+.section-about {
+
+    & .btn {
+        @include respond(phone) {
+            text-align: center;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    }
+}
+
+.section-services,
+.section-facts {
+    background-color: $color-black;
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.section-team {
+    background-image: url(../img/team-background.jpg);
+
+    @include respond(tab-port) {
+        background: linear-gradient(rgba($color-black, .8), rgba($color-black, .8)), url(../img/team-background.jpg);
+    }
+}
+
+.section-clients {
+    padding: $gutter-vertical-small 0 0 0;
+
+    .client {
+
+        &__details {
+
+            &--cite,
+            &--text {
+                font-style: normal;
+                font-weight: 300;
+                color: $color-black;
+                
+            }
+
+            &--cite {
+                text-shadow: 0px 1px, 1px 0px, 1px 1px;
+            }
+        }
+
+        &__quote {
+                width: 70%;
+                margin: 0 auto;
+                font-style: normal;
+                font-size: 1.4rem;
+                font-weight: 500;
+                position: relative;
+                margin-top: 6rem;
+
+                @include respond(phone) {
+                    width: 100%;
+                }
+            
+            
+            &:before {
+                content: "\201C";
+                font-size: 10rem;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    .logo {
+        border-top: 1px solid $color-grey-light-3;
+        border-bottom: 1px solid $color-grey-light-3;
+        background-color: $color-white;
+
+        &-box {
+            float: left;
+            width: 16.66666%;
+            height: 18rem;
+            position: relative;
+            transition: all .5s ease-out;
+
+            &:hover {
+                transform: scale(.95);
+            }
+
+            @include respond(tab-land) {
+                width: 33%;
+            }
+
+            @include respond(phone) {
+                width: 50%;
+                height: 10rem;
+            }
+        }
+
+        &__img {
+            @include absCenter; 
+        }
+    }
+}
+
+.section-price {
+    border-bottom: 1px solid $color-grey-light-3;
+}
+
+.section-premium {
+    background-color: $color-white;
+
+    .premium {
+
+        &-img {
+            width: 100%;
+        }
+        &-features {
+            position: relative;
+            margin-bottom: 3rem;
+
+            @include respond(tab-port) {
+                margin-left: 10rem;
+            }
+
+            &__icon {
+                position: absolute;
+                top: -.5rem;
+                left: -7rem;
+                font-size: 5rem;
+                color: $color-brown;
+            }
+
+            &__heading {
+                color: $color-black-light;
+                font-size: 2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            &__description {
+                color: $color-grey-light;
+                font-size: 1.4rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            &__feature {
+                color: $color-grey-light;
+                font-size: 1.4rem;
+                font-weight: 600;
+                line-height: 3rem;
+                text-transform: uppercase;
+                margin-left: 1.5rem;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 1rem;
+                    height: 2px;
+                    background-color: $color-grey-light;
+                    position: absolute;
+                    top: 50%;
+                    left: -1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.section-facts {
+    .facts {
+        font-size: 1.5rem;
+        padding: 2.5rem;
+        text-align: center;
+        //height: 25rem;
+
+        &__number {
+            color: $color-brown;
+            font-size: 5rem;
+            font-weight: 700;
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 2rem;
+                height: 3px;
+                background-color: $color-grey-dark-2;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, -1rem);
+            }
+        }
+
+        & .heading-ternary {
+            height: 6rem;
+
+            @include respond(tab-land) {
+                height: 10rem;
+            }
+
+            @include respond(tab-port) {
+                height: auto;
+            }
+        }
+    }
+}
+
+.section-contact {
+    padding: $gutter-vertical-small 0 0 0;
+    
+    .contact-form {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .address {
+        width: 100%;
+        background-image: url(../img/map.jpg);
+        padding: 3rem 0;
+        background-size: 100%;
+
+        .address__box {
+            width: 100%;
+            padding: 2.5rem 2rem;
+            background-color: $color-white;
+        }
+
+        &__field {
+            position: relative;
+            margin: 2rem 0 2rem 6rem;
+            font-size: 1.2rem;
+        }
+
+        &__icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: -5rem;
+            transform: translateY(-50%);
+            font-size: 1.4rem;
+            line-height: 2.8rem;
+            color: $color-white;
+            background-color: $color-grey-light;
+            border-radius: 50%;
+            width: 2.8rem;
+            height: 2.8rem;
+            text-align: center;
+        }
+    }
+}

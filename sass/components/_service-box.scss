@@ -1,0 +1,53 @@
+.service-box {
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all .5s;
+    height: 25rem;
+    border-left: 2px solid $color-grey-light;
+    border-right: 2px solid $color-grey-light;
+    margin: 0 -3.1rem;
+ 
+    @include respond(tab-land) {
+        border: none;
+        margin: 0 -2rem;
+    }
+
+    @include respond(tab-port) {
+        height: auto;
+    }
+
+    & .heading-ternary {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__icon {
+        color: $color-brown;
+        font-size: 6rem;
+        margin-bottom: 2.5rem;
+        display: inline-block;
+        transition: all .5s ease-out;
+        width: 90%;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        color: $color-grey-light;
+        font-size: 1.2rem;
+        letter-spacing: .1px;
+        transition: all .5s ease-out;
+    }
+
+    &:hover &__icon,
+    &:hover &__text,
+    &:hover .heading-ternary {
+        transform: translateY(-1.5rem);
+    }
+
+    
+}

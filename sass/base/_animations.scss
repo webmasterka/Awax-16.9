@@ -1,0 +1,65 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-about,
+#service-box-animation,
+.projects,
+.team,
+.price-card {
+    opacity: 0;
+    animation-duration: 1.5s;    
+}
+
+.section-about.animated,
+#service-box-animation.animated,
+.projects.animated,
+.team.animated,
+.price-card.animated {
+    opacity: 1;
+}
+
+.logo-box {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}

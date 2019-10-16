@@ -1,0 +1,95 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    //font-size: 1.6rem;
+    line-height: 1.75;
+    color: $color-grey-dark;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--top, &--bot {
+        display: block;
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 6rem;
+        letter-spacing: .1rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 3rem;
+        }
+    }
+
+    &--bot {
+        color: $color-brown;
+    }
+
+    &--sub {
+        line-height: 5rem;
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        animation: moveInRight 1s ease-out;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.heading-secondary {
+    color: $color-black;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+
+    &--main {
+        display: block;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3rem;
+        letter-spacing: .1rem;
+    }
+
+    &--sub {
+        line-height: 5rem;
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 3em;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+}
+
+.heading-ternary {
+    color: $color-white;
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+}
+
+.paragraph {
+    color: $color-grey-light;
+    font-size: 1.2rem;
+    font-weight: 400;
+}

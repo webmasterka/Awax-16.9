@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // default font size in browser = 16px
+    // this defines what 1rem is
+    font-size: 62.5%;   // 1 rem = 10px; 10px/16px = 62.5
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $color-white-dark;
+    max-width: 1600px;
+    margin: 0 auto;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2)
+}
+  
+::selection {
+    background-color: $color-brown;
+    color: $color-white;
+}

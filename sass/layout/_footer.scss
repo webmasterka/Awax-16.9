@@ -1,0 +1,110 @@
+.footer {
+    background-color: $color-black;
+    padding: 4rem 0;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+        padding: 4rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
+
+    &__left {
+        position: relative;
+        height: 25rem;
+
+        @include respond(tab-port) {
+            height: auto;
+        }
+    }
+
+    &__form {
+        background-color: $color-grey-dark-3;
+        padding: 6rem;
+        border-radius: 3px;
+
+        @include respond(tab-land) {
+            padding: 6rem 3rem;
+        }
+    }
+
+    & .form__group {
+        background-color: $color-grey-dark;
+        position: relative;
+    }
+
+    & .form__input {
+        background-color: $color-grey-dark-3;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    & .form__label {
+        width: 100%;
+        text-align: center;
+        transition: all .3s ease-in;
+    }
+
+    & .form__input:placeholder-shown + & .form__label {
+        opacity: 1;
+        font-size: $default-font-size;
+        visibility: hidden;
+    } 
+
+    & .team__social-icons {
+        text-align: left;
+
+        &--footer {        
+            margin-right: .3rem;   
+
+                & i {
+
+                    @include respond(tab-land) {
+                        width: 2.8rem;
+                        font-size: 1.4rem;
+                        line-height: 2.8rem;
+                    }
+                }
+                    
+                &:link,
+                &:visited {             
+                    background-color: $color-grey-dark-3;
+
+                    @include respond(tab-land) {
+                        width: 2.8rem;
+                        height: 2.8rem;
+                        line-height: 2.8rem;
+                        margin-right: 0;
+                    }
+                }
+
+                &:hover,
+                &:active {
+                    background-color: $color-brown;
+                }        
+        }
+
+        @include respond(tab-port) {
+            text-align: center;
+        }
+    }
+
+    &__copyright {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        text-align: center;
+
+        &-text {
+            color: $color-white-dark;
+            font-weight: 700;
+        }
+    }
+}
+
+
+

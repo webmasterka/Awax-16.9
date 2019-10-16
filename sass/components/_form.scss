@@ -1,0 +1,78 @@
+.form {
+
+    &__group {        
+        position: relative;
+        float: left;
+        width: 100%;
+
+        &--name, &--email {
+            width: 48%;
+
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+
+        &--email {
+            margin-left: 4%;
+
+            @include respond(phone) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1rem 0;
+        border-radius: 2px;
+        background-color: $color-white-dark;
+        border: none;
+        border-bottom: 2px solid $color-grey-light;
+        width: 100%;
+        display: block;
+        transition: all .5s ease-in;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    
+        &:focus {
+            outline: none;
+            border-bottom: 3px solid $color-black-light;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-google;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-light;
+        }
+    }    
+
+    &__label {
+        font-size: 1.2rem;
+        color: $color-grey-light;
+        display: block;
+        text-transform: uppercase;
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+        transition: all .3s ease-in;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 1;
+        font-size: $default-font-size;
+        visibility: hidden;
+        transform: translateY(2rem);
+    }   
+}
